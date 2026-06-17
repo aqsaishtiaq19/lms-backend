@@ -6,10 +6,11 @@ const connectDB = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI);
     console.log(" Database Connected!");
-  } catch (error) {
-    console.error(" DB Error:", error);
-    process.exit(1);
   }
+   catch (error) {
+    console.error("REGISTER ERROR:", error) 
+    res.status(500).json({ message: error.message }) 
+}
 };
 
 module.exports = connectDB;
