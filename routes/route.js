@@ -18,7 +18,7 @@ const {
     addToWishlist,
     getWishlist,
     removeFromWishlist
-} = require('../controllers/wishlistController');
+} = require('../controllers/temp-wishlist');
 
 const protect = require('../middleware/authMiddleware');
 
