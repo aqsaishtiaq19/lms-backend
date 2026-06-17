@@ -13,7 +13,7 @@ const wishlistSchema = new mongoose.Schema({
     }
 }, { timestamps: true });
 
-/* 🔥 IMPORTANT FIX */
+
 wishlistSchema.index({ user: 1, course: 1 }, { unique: true });
 
 module.exports = mongoose.model("Wishlist", wishlistSchema);

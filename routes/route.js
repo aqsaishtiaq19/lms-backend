@@ -18,7 +18,7 @@ const {
     addToWishlist,
     getWishlist,
     removeFromWishlist
-} = require('../controllers/WishlistController');
+} = require('../controllers/wishlistController');
 
 const protect = require('../middleware/authMiddleware');
 
@@ -57,9 +57,11 @@ router.delete('/courses/:id', protect, deleteCourse);
 
 
 // Wishlist Routes
-router.post('/wishlist', protect, addToWishlist);
-router.get('/wishlist', protect, getWishlist);
 
-router.delete('/wishlist/:id', protect, removeFromWishlist);
+
+router.post('/wishlist', protect, addToWishlist)
+router.get('/wishlist', protect, getWishlist)
+router.delete('/wishlist/:id', protect, removeFromWishlist)
+                       
 
 module.exports = router;
