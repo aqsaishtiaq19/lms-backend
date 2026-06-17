@@ -10,8 +10,8 @@ connectDB();
 const app = express();
 
 app.use(cors({
-    origin: '*',
-    credentials: false
+    origin: "https://lms-frontend-git-main-momin2.vercel.app",
+    credentials: true
 }));
 
 app.use(express.json());
