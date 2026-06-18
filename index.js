@@ -8,11 +8,13 @@ const connectDB = require('./Database/db');
 connectDB();
 
 const app = express();
+
 app.use(cors({
     origin: [
         "https://lms-frontend-momin2.vercel.app",
         "https://lms-frontend-git-main-momin2.vercel.app",
-        "https://lms-frontend-44t3bg55k-momin2.vercel.app"
+        "https://lms-frontend-44t3bg55k-momin2.vercel.app",
+        "https://lms-frontend-seven-lilac.vercel.app"
     ],
     credentials: true
 }));
