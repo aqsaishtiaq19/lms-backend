@@ -62,9 +62,10 @@ const register = async (req, res) => {
             }
         })
 
-    } catch (error) {
-        res.status(500).json({ message: "Server error" })
-    }
+     } catch (error) {
+    console.error("REGISTER ERROR:", error.message)
+    res.status(500).json({ message: error.message })
+}
 }
 
 // ===== LOGIN =====
@@ -115,6 +116,7 @@ const login = async (req, res) => {
         })
 
     } catch (error) {
+        console.error("LOGIN ERROR:", error.message)
         res.status(500).json({ message: "Server error" })
     }
 }
