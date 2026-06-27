@@ -6,6 +6,7 @@ A robust, secure RESTful backend API for a **Learning Management System** built 
 ![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
+![MongoDB Atlas](https://img.shields.io/badge/MongoDB%20Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Railway](https://img.shields.io/badge/Railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white)
 
 ---
@@ -23,6 +24,7 @@ A robust, secure RESTful backend API for a **Learning Management System** built 
 - 🔒 Password hashing with **bcrypt**
 - 📚 Full Course Management APIs
 - ❤️ Wishlist functionality (add, view & remove)
+- 🗄️ Data stored in **MongoDB Atlas** cloud database
 - 🚦 Middleware-protected routes
 - 🚀 Deployed on **Railway** with auto-deploy on push
 
@@ -34,7 +36,8 @@ A robust, secure RESTful backend API for a **Learning Management System** built 
 |---|---|
 | Node.js | Runtime environment |
 | Express.js | Web framework |
-| MongoDB + Mongoose | Database & ODM |
+| MongoDB Atlas | Cloud-hosted database |
+| Mongoose | ODM for MongoDB |
 | JWT (jsonwebtoken) | Authentication tokens |
 | bcryptjs | Password hashing |
 | CORS | Cross-origin resource sharing |
@@ -78,7 +81,7 @@ A robust, secure RESTful backend API for a **Learning Management System** built 
 
 - Node.js installed
 - npm or yarn
-- MongoDB Atlas account
+- MongoDB Atlas account & cluster
 
 ### Installation
 
