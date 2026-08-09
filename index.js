@@ -9,15 +9,28 @@ connectDB();
 
 const app = express();
 
-app.use(cors({
-    origin: [
-        "http://localhost:3000", 
+// Allowed origins that never change (local dev + any custom-named deployments)
+const staticAllowedOrigins = [
+    "http://localhost:3000",
+    "https://lms-frontend-momin2.vercel.app",
+    "https://lms-frontend-git-main-momin2.vercel.app",
+    "https://lms-frontend-seven-lilac.vercel.app"
+];
 
-        "https://lms-frontend-momin2.vercel.app",
-        "https://lms-frontend-git-main-momin2.vercel.app",
-        "https://lms-frontend-44t3bg55k-momin2.vercel.app",
-        "https://lms-frontend-seven-lilac.vercel.app"
-    ],
+// Matches any auto-generated Vercel preview URL for this project,
+const previewUrlPattern = /^https:\/\/lms-frontend-[a-z0-9]+-momin2\.vercel\.app$/;
+
+app.use(cors({
+    origin: function (origin, callback) {
+        // Allow requests with no origin (e.g. Postman, server-to-server calls)
+        if (!origin) return callback(null, true);
+
+        if (staticAllowedOrigins.includes(origin) || previewUrlPattern.test(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error("Not allowed by CORS: " + origin));
+        }
+    },
     credentials: true
 }));
 
